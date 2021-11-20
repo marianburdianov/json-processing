@@ -43,15 +43,17 @@ public class App {
         MapService mapService = new MapServiceImpl();
         RedisCommandsService redisCommandsService = new RedisCommandsServiceImpl();
         BidJsonObjectSelectorService bidJsonObjectSelectorService = new BidJsonObjectSelectorServiceImpl();
+
         JsonArrayToListOfJsonObjectsConverterService jsonArrayToListOfJsonObjectsConverterService =
                 new JsonArrayToListOfJsonObjectsConverterServiceImpl(objectToJsonArrayConverterService);
+
         RedisStreamProducerService redisStreamProducerService =
                 new RedisStreamProducerServiceImpl(
-                        coderService,
-                        mapService,
+                        coderService, mapService,
                         redisCommandsService,
                         bidJsonObjectSelectorService,
                         jsonArrayToListOfJsonObjectsConverterService);
+
         redisStreamProducerService.createResource();
     }
 }
