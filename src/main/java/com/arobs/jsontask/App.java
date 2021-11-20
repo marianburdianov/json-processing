@@ -2,7 +2,14 @@ package com.arobs.jsontask;
 
 import com.arobs.jsontask.file_service.FileReaderService;
 import com.arobs.jsontask.file_service.FileReaderServiceImpl;
-import com.arobs.jsontask.json_service.*;
+import com.arobs.jsontask.json_service.BidJsonObjectSelectorService;
+import com.arobs.jsontask.json_service.JsonArrayToListOfJsonObjectsConverterService;
+import com.arobs.jsontask.json_service.ObjectToJsonArrayConverterService;
+import com.arobs.jsontask.json_service.FileContentToObjectConverterService;
+import com.arobs.jsontask.json_service.JsonArrayToListOfJsonObjectsConverterServiceImpl;
+import com.arobs.jsontask.json_service.BidJsonObjectSelectorServiceImpl;
+import com.arobs.jsontask.json_service.ObjectToJsonArrayConverterServiceImpl;
+import com.arobs.jsontask.json_service.FileContentToObjectConverterServiceImpl;
 import com.arobs.jsontask.redis_service.RedisCommandsService;
 import com.arobs.jsontask.redis_service.RedisCommandsServiceImpl;
 import com.arobs.jsontask.redis_service.RedisStreamProducerService;
